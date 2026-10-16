@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    // 别名：@/* 映射到 src/*
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@db/*": ["src/db/*"],
+      "@utils/*": ["src/utils/*"],
+    }
+  }
+}

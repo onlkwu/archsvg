@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "ui-not-db",
+      "from": "src/ui/**",
+      "to": "src/db/**",
+      "forbidden": true,
+      "message": "ui 层不应直接依赖 db 层，请经过 api 层"
+    },
+    {
+      "id": "utils-is-leaf",
+      "from": "src/utils/**",
+      "to": "src/core/**",
+      "forbidden": true,
+      "message": "utils 是最底层，不应反向依赖 core"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# 统一换行符为 LF。
+#
+# 这是功能性要求而不是风格偏好：archsvg 的核心承诺之一是
+# "同一输入产出字节级一致的 SVG"，如果检出时把换行改成 CRLF，
+# 那么同一份代码在不同平台上生成的 svg 就会有差异，
+# 而且 README 里引用的配图也会在别人的机器上被 git 标记成已修改。
+* text=auto eol=lf
+
+# 明确声明为二进制，禁止任何换行转换与 diff 处理
+*.png binary
+*.tgz binary
+
+# SVG 必须保持 LF，否则确定性测试会在 Windows 上失败
+*.svg text eol=lf

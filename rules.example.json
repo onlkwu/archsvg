@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "ui-not-db",
+      "from": "src/ui/**",
+      "to": "src/db/**",
+      "forbidden": true,
+      "message": "ui 层不应直接依赖 db 层，请经过 api 层"
+    },
+    {
+      "id": "core-not-api",
+      "from": "src/core/**",
+      "to": "src/api/**",
+      "forbidden": true,
+      "message": "core 层不应反向依赖 api 层"
+    },
+    {
+      "id": "no-cross-package",
+      "from": "packages/a/**",
+      "to": "packages/b/**",
+      "forbidden": true,
+      "message": "monorepo 内不同包之间不应直接互相引用，请走公开入口"
+    }
+  ]
+}

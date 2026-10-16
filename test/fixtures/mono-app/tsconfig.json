@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    // 根配置定义的是仓库级别名
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["packages/shared/*"]
+    }
+  }
+}

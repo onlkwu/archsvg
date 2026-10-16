@@ -1,0 +1,15 @@
+# 生成物
+out/
+
+# 依赖目录（本项目零依赖，保留以防将来引入）
+node_modules/
+
+# 编辑器与系统
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# 临时文件
+*.log
+*.local

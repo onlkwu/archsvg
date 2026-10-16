@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    // 包内配置覆盖根配置：@core/* 只在这个包里有效
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["src/core/*"]
+    }
+  }
+}

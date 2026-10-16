@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="571" height="880" viewBox="0 0 571 880" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace" role="img" aria-label="demo-app v0.1.0 架构图">
+<title>demo-app v0.1.0 模块依赖图</title>
+<desc>9 个模块 · 16 条依赖 · 76 行代码 · 2 组循环依赖</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#cbd2d9"/></marker>
+<marker id="arrowCycle" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c0392b"/></marker>
+</defs>
+<rect x="0" y="0" width="571" height="880" fill="#ffffff"/>
+<text x="40" y="62" font-size="16" font-weight="600" fill="#1f2933">demo-app v0.1.0</text>
+<text x="40" y="82" font-size="11" fill="#7b8794">9 个模块 · 16 条依赖 · 76 行代码 · 2 组循环依赖</text>
+<g stroke-linejoin="round" fill="none">
+<path d="M210.3 666 L210.3 580 L218.5 580 L218.5 494" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>router.ts → config.ts（1 次）
+src/api/router.ts:2</title></path>
+<path d="M216.3 666 L216.3 580 L334.5 580 L334.5 494" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>router.ts → client.ts（1 次）
+src/api/router.ts:1</title></path>
+<path d="M210.3 666 L210.3 450 L328.5 450 L328.5 234" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>router.ts → log.ts（1 次）
+src/api/router.ts:3</title></path>
+<path d="M218.5 536 L218.5 320 L273.5 320 L273.5 104" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>config.ts → env.ts（1 次）
+src/core/config.ts:1</title></path>
+<path d="M328.5 536 L328.5 234" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>client.ts → log.ts（1 次）
+src/db/client.ts:2</title></path>
+<path d="M328.5 536 L328.5 450 L273.5 450 L273.5 364" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>client.ts → sql.ts（1 次）
+src/db/client.ts:1</title></path>
+<path d="M273.5 796 L273.5 710 L210.3 710 L210.3 624" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>main.ts → router.ts（1 次）
+src/main.ts:2</title></path>
+<path d="M273.5 796 L273.5 645 L218.5 645 L218.5 494" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>main.ts → config.ts（1 次）
+src/main.ts:5</title></path>
+<path d="M279.5 796 L279.5 710 L334.5 710 L334.5 624" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>main.ts → dashboard.ts（1 次）
+src/main.ts:3</title></path>
+<path d="M273.5 796 L273.5 515 L218.5 515 L218.5 234" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>main.ts → date.ts（1 次）
+src/main.ts:4</title></path>
+<path d="M340.5 666 L340.5 494" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>dashboard.ts → client.ts（1 次）
+src/ui/dashboard.ts:2</title></path>
+<path d="M334.5 666 L334.5 450 L224.5 450 L224.5 234" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>dashboard.ts → date.ts（1 次）
+src/ui/dashboard.ts:3</title></path>
+<path d="M218.5 276 L218.5 190 L273.5 190 L273.5 104" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>date.ts → env.ts（1 次）
+src/utils/date.ts:2</title></path>
+<path d="M230.5 276 L230.5 296 L340.5 296 L340.5 276" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arrowCycle)"><title>date.ts → log.ts（1 次）
+src/utils/date.ts:1</title></path>
+<path d="M230.5 276 L230.5 310 L340.5 310 L340.5 276" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arrowCycle)"><title>log.ts → date.ts（1 次）
+src/utils/log.ts:2</title></path>
+<path d="M273.5 406 L273.5 320 L328.5 320 L328.5 234" stroke="#cbd2d9" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"><title>sql.ts → log.ts（1 次）
+src/utils/sql.ts:1</title></path>
+</g>
+<g>
+<rect x="240.5" y="104" width="90" height="42" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"><title>env.ts · 3 行 · 入度 2 / 出度 0</title></rect>
+<text x="285.5" y="123" font-size="12" fill="#1f2933" text-anchor="middle">env.ts</text>
+<text x="285.5" y="138" font-size="10" fill="#7b8794" text-anchor="middle">3 行</text>
+<rect x="185.5" y="234" width="90" height="42" rx="6" fill="#fbeae8" stroke="#c0392b" stroke-width="1"><title>date.ts · 7 行 · 入度 3 / 出度 2</title></rect>
+<text x="230.5" y="253" font-size="12" fill="#1f2933" text-anchor="middle">date.ts</text>
+<text x="230.5" y="268" font-size="10" fill="#7b8794" text-anchor="middle">7 行</text>
+<rect x="295.5" y="234" width="90" height="42" rx="6" fill="#fbeae8" stroke="#c0392b" stroke-width="1"><title>log.ts · 6 行 · 入度 4 / 出度 1</title></rect>
+<text x="340.5" y="253" font-size="12" fill="#1f2933" text-anchor="middle">log.ts</text>
+<text x="340.5" y="268" font-size="10" fill="#7b8794" text-anchor="middle">6 行</text>
+<rect x="240.5" y="364" width="90" height="42" rx="6" fill="#fbeae8" stroke="#c0392b" stroke-width="1"><title>sql.ts · 9 行 · 入度 1 / 出度 1</title></rect>
+<text x="285.5" y="383" font-size="12" fill="#1f2933" text-anchor="middle">sql.ts</text>
+<text x="285.5" y="398" font-size="10" fill="#7b8794" text-anchor="middle">9 行</text>
+<rect x="185.5" y="494" width="90" height="42" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"><title>config.ts · 11 行 · 入度 2 / 出度 1</title></rect>
+<text x="230.5" y="513" font-size="12" fill="#1f2933" text-anchor="middle">config.ts</text>
+<text x="230.5" y="528" font-size="10" fill="#7b8794" text-anchor="middle">11 行</text>
+<rect x="295.5" y="494" width="90" height="42" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"><title>client.ts · 7 行 · 入度 2 / 出度 2</title></rect>
+<text x="340.5" y="513" font-size="12" fill="#1f2933" text-anchor="middle">client.ts</text>
+<text x="340.5" y="528" font-size="10" fill="#7b8794" text-anchor="middle">7 行</text>
+<rect x="177.3" y="624" width="90" height="42" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"><title>router.ts · 14 行 · 入度 1 / 出度 3</title></rect>
+<text x="222.3" y="643" font-size="12" fill="#1f2933" text-anchor="middle">router.ts</text>
+<text x="222.3" y="658" font-size="10" fill="#7b8794" text-anchor="middle">14 行</text>
+<rect x="287.3" y="624" width="106.4" height="42" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"><title>dashboard.ts · 8 行 · 入度 1 / 出度 2</title></rect>
+<text x="340.5" y="643" font-size="12" fill="#1f2933" text-anchor="middle">dashboard.ts</text>
+<text x="340.5" y="658" font-size="10" fill="#7b8794" text-anchor="middle">8 行</text>
+<rect x="240.5" y="754" width="90" height="42" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"><title>main.ts · 11 行 · 入度 0 / 出度 4</title></rect>
+<text x="285.5" y="773" font-size="12" fill="#1f2933" text-anchor="middle">main.ts</text>
+<text x="285.5" y="788" font-size="10" fill="#7b8794" text-anchor="middle">11 行</text>
+</g>
+<g transform="translate(40,834)">
+<rect x="0" y="-9" width="14" height="10" rx="2" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"/>
+<text x="21" y="-1" font-size="10" fill="#7b8794">模块</text>
+<rect x="65" y="-9" width="14" height="10" rx="2" fill="#fbeae8" stroke="#c0392b" stroke-width="1"/>
+<text x="86" y="-1" font-size="10" fill="#7b8794">循环依赖</text>
+<path d="M154 -4 H170" stroke="#cbd2d9" stroke-width="1.4" fill="none"/>
+<text x="175" y="-1" font-size="10" fill="#7b8794">强依赖</text>
+<path d="M231 -4 H247" stroke="#cbd2d9" stroke-width="1.4" stroke-dasharray="4 3" fill="none"/>
+<text x="252" y="-1" font-size="10" fill="#7b8794">弱依赖（≤2 次）</text>
+<path d="M362 -4 H378" stroke="#c0392b" stroke-width="1.4" fill="none"/>
+<text x="383" y="-1" font-size="10" fill="#7b8794">环内依赖</text>
+</g>
+<text x="531" y="834" font-size="10" fill="#7b8794" text-anchor="end">archsvg</text>
+</svg>

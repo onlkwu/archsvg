@@ -1,0 +1,46 @@
+{
+  "name": "archsvg",
+  "version": "0.1.0",
+  "description": "从仓库结构生成可嵌入 README 的确定性架构图，并把架构漂移变成 CI 能拦住的检查",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "archsvg": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "rules.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "check": "node --check bin/cli.mjs && node --check src/analyze.mjs && node --check src/graph.mjs && node --check src/imports.mjs && node --check src/labels.mjs && node --check src/lang.mjs && node --check src/layout.mjs && node --check src/log.mjs && node --check src/node-builtins.mjs && node --check src/pkg-imports.mjs && node --check src/py-stdlib.mjs && node --check src/render-html.mjs && node --check src/render-svg.mjs && node --check src/report.mjs && node --check src/resolve.mjs && node --check src/rules.mjs && node --check src/scan.mjs && node --check src/text.mjs && node --check src/theme.mjs",
+    "svg": "node bin/cli.mjs demo --out docs/architecture.svg && node tools/render-png.mjs",
+    "svg:vector": "node bin/cli.mjs demo --out docs/architecture.svg",
+    "check:svg": "node test/helpers/inspect-svg.mjs docs/architecture.svg",
+    "stress": "node tools/run-stress.mjs",
+    "smoke": "node bin/cli.mjs . --out out/self.svg"
+  },
+  "keywords": [
+    "architecture",
+    "dependency-graph",
+    "diagram",
+    "svg",
+    "cli",
+    "architecture-drift",
+    "monorepo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlkwu/archsvg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onlkwu/archsvg/issues"
+  },
+  "homepage": "https://github.com/onlkwu/archsvg#readme"
+}
